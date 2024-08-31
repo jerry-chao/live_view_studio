@@ -1,0 +1,26 @@
+<h1>Downloads</h1>
+<div id="downloads">
+  <div class="sidebar">
+    <div class="nav">
+      <.link
+        :for={download <- @downloads}
+        patch={~p"/downloads?#{[id: download.id]}"}
+        class={if download == @selected_download, do: "selected"}
+      >
+        <%= download.channel %>
+      </.link>
+    </div>
+  </div>
+  <div class="main">
+    <div class="body">
+      <div class="row">
+        <span>
+          <%= @selected_download.channel %>
+        </span>
+        <span>
+          <%= @selected_download.url %>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

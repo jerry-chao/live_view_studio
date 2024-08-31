@@ -32,6 +32,7 @@ defmodule LiveViewStudioWeb.Router do
 
     get "/", PageController, :home
 
+    live "/downloads", DownloadsLive
     live "/light", LightLive
     live "/sandbox", SandboxLive
     live "/sales", SalesLive
